@@ -15,54 +15,45 @@
 
 <body>
     <!-- Navbar -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" width="30" height="30" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Principal</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="quienes_somos.html">Quiénes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="acerca_de.html">Acerca de</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="registrarse.html">Registrarse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="form-inline">
-                            <form action="php/busqueda.php" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="busqueda" placeholder="Buscar"
-                                    aria-label="Buscar">
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" width="30" height="30" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Principal</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="quienes_somos.html">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca_de.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrarse.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="php/busqueda.php" method="GET">
+                    <input class="form-control me-2" type="search" name="busqueda" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <!-- Cards -->
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="img/person1.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -73,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="img/person2.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -84,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="img/person3.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -98,7 +89,6 @@
         </div>
     </div>
 
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 

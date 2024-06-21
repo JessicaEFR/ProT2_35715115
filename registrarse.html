@@ -15,103 +15,78 @@
 
 <body>
     <!-- Navbar -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" width="30" height="30" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Principal</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="quienes_somos.html">Quiénes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="acerca_de.html">Acerca de</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="registrarse.html">Registrarse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="form-inline">
-                            <form action="php/busqueda.php" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="busqueda" placeholder="Buscar"
-                                    aria-label="Buscar">
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" width="30" height="30" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quienes_somos.html">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca_de.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrarse.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="php/busqueda.php" method="GET">
+                    <input class="form-control me-2" type="search" name="busqueda" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <!-- Formulario de Registro -->
     <div class="container mt-5">
-        <div class="text-center d-flex justify-content-center">
+        <div class="text-center mb-4">
             <h1>Registrarse</h1>
         </div>
-        <form action="php/register.php" method="POST">
-            <div class="w-50 mx-auto px-3">
-                <div class="form-group mb-3 d-flex align-items-center">
-                    <label for="nombre" class="col-sm-2 col-form-label text-center" style="width: 20%;">Nombre</label>
-                    <div class="col-sm-10 d-flex align-items-center">
-                        <input type="text" class="form-control me-2" id="nombre" name="nombre" placeholder="Nombre"
-                            pattern="^[a-zA-Z ]*$">
+        <form action="php/register.php" method="POST" class="w-100">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" pattern="^[a-zA-Z ]*$">
                     </div>
-                </div>
-                <div class="form-group mb-3 d-flex align-items-center">
-                    <label for="apellido" class="col-sm-2 col-form-label text-center"
-                        style="width: 20%;">Apellido</label>
-                    <div class="col-sm-10 d-flex align-items-center">
-                        <input type="text" class="form-control me-2" id="apellido" name="apellido"
-                            placeholder="Apellido" pattern="^[a-zA-Z ]*$">
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" pattern="^[a-zA-Z ]*$">
                     </div>
-                </div>
-                <div class="form-group mb-3 d-flex align-items-center">
-                    <label for="email" class="col-sm-2 col-form-label text-center" style="width: 20%;">Email</label>
-                    <div class="col-sm-10 d-flex align-items-center">
-                        <input type="email" class="form-control me-2" id="email" name="email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="tu@mail.com" required>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="tu@mail.com" required>
                     </div>
-                </div>
-                <div class="form-group mb-3 d-flex align-items-center">
-                    <label for="usuario" class="col-sm-2 col-form-label text-center" style="width: 20%;">Usuario</label>
-                    <div class="col-sm-10 d-flex align-items-center">
-                        <input type="text" class="form-control me-2" id="usuario" name="usuario" placeholder="Usuario"
-                            pattern="^[a-zA-Z0-9]+$">
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" pattern="^[a-zA-Z0-9]+$">
                     </div>
-                </div>
-                <div class="form-group mb-3 d-flex align-items-center">
-                    <label for="password" class="col-sm-2 col-form-label text-center"
-                        style="width: 20%;">Contraseña</label>
-                    <div class="col-sm-10 d-flex align-items-center">
-                        <input type="password" class="form-control me-2" id="password" name="password"
-                            pattern="^[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':\\\|,.<>\/?]+$" placeholder="Contraseña">
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" pattern="^[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':\\\|,.<>\/?]+$" placeholder="Contraseña">
                     </div>
-                </div>
-                <div class="d-flex justify-content-center mt-3">
-                    <button type="submit" class="btn btn-primary me-3">Registrarse</button>
-                    <a href="index.php" class="btn btn-danger">Cancelar</a>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <a href="index.php" class="btn btn-danger">Cancelar</a>
+                    </div>
                 </div>
             </div>
         </form>
     </div>
 
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
