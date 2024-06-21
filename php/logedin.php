@@ -25,51 +25,46 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <!-- Navbar -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/logo.png" width="30" height="30" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Principal</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../quienes_somos.html">Quiénes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../acerca_de.html">Acerca de</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="form-inline">
-                            <form action="busqueda.php" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="busqueda" placeholder="Buscar"
-                                    aria-label="Buscar">
-                        </div>
-                        <div>
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.png" width="30" height="30" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../quienes_somos.html">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../acerca_de.html">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="busqueda.php" method="GET">
+                    <input class="form-control me-2" type="search" name="busqueda" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
     <div class="container mt-5">
-        <?php if (isset($_SESSION['user_name'])): ?>
-            <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION['user_name'] . ' ' . $_SESSION['user_surname']); ?>!</h1>
-        <?php else: ?>
-            <h1>Bienvenido, usuario desconocido!</h1>
-        <?php endif ?>
-        <p>Has iniciado sesión exitosamente.</p>
-        <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
+        <div class="text-center">
+            <?php if (isset($_SESSION['user_name'])): ?>
+                <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION['user_name'] . ' ' . $_SESSION['user_surname']); ?>!</h1>
+            <?php else: ?>
+                <h1>Bienvenido, usuario desconocido!</h1>
+            <?php endif ?>
+            <p>Has iniciado sesión exitosamente.</p>
+            <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
+        </div>
     </div>
 </body>
 

@@ -25,24 +25,22 @@
 
 <body>
     <div class="container">
-        <h1 class="mt-5">Resultados de Búsqueda</h1>
+        <h1 class="mt-5 text-center">Resultados de Búsqueda</h1>
         <?php
-        // Obtener el valor de búsqueda desde la URL
         $search_query = isset($_GET['q']) ? $_GET['q'] : '';
 
-        // Simular una búsqueda en tu sistema (aquí deberías conectarte a tu base de datos y realizar la consulta real)
-        $elemento_encontrado = false; // Variable para simular si se encontró el elemento
-        
-        // Simulamos que no se encontró ningún elemento
+        $elemento_encontrado = false;
+
         if (empty($search_query)) {
-            echo '<div class="alert alert-warning" role="alert">No se encontraron resultados con el término de búsqueda.</div>';
+            echo '<div class="alert alert-warning text-center" role="alert">No se encontraron resultados con el término de búsqueda.</div>';
         } else {
-            echo '<div class="alert alert-info" role="alert">No se encontró ningún elemento con el término de búsqueda: <strong>' . htmlspecialchars($search_query) . '</strong></div>';
+            echo '<div class="alert alert-info text-center" role="alert">No se encontró ningún elemento con el término de búsqueda: <strong>' . htmlspecialchars($search_query) . '</strong></div>';
         }
         ?>
-        <a href="../index.html" class="btn btn-primary">Volver a la página principal</a>
+        <div class="text-center mt-4">
+            <a href="../index.html" class="btn btn-primary">Volver a la página principal</a>
+        </div>
     </div>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
